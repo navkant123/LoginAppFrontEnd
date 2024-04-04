@@ -1,0 +1,54 @@
+<div class="bootstrap-wrapper">
+    <div class="container mt">
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+
+
+        <div class="container text-center ">
+
+<img class="img-fluid" style="width: 100px;" src="/assets/password.png">
+
+        </div>
+
+
+
+
+        <h1 class="text-center">Login Here..!!</h1>
+        <!--Creating login forms-->
+
+<form (ngSubmit)="onSubmit()">
+
+<mat-form-field class="full-width">  <!--After full width yu can use appearance to change input field style-->
+
+    <mat-label>userName</mat-label>
+    <input [(ngModel)]="credentials.userName" required
+    name="userName"
+
+    type="text" matInput>
+</mat-form-field>
+
+<mat-form-field class="full-width">
+
+    <mat-label>passWord</mat-label>
+    <input [(ngModel)]="credentials.passWord" required
+    name="userName"
+    
+    type="password" matInput>
+</mat-form-field>
+
+<div class="container text-center">
+
+    <button type="=submit" mat-raised-button color="primary">Login</button>
+    <button type="=reset" mat-raised-button color="accent" style="margin-left: 10px;">Reset</button>
+
+</div>
+
+</form>
+
+<br />
+<P class="mt">{{credentials | json}}</P>
+
+    </div>
+</div>
+    </div>
+</div>
